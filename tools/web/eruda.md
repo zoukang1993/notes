@@ -23,6 +23,8 @@
 })();
 
 or 
+ trigger with url hava 'debug', example https://star.kuipmake.com?debug
+
 <script>
     (function() {
       let url = window.location.href;
@@ -38,4 +40,3 @@ or
     })()
   </script>
 ```
-

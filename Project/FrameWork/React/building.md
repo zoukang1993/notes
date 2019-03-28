@@ -2,7 +2,6 @@
 
 #### build
 
-
 ```
 npm install -g create-react-app
 create-react-app demo-app
