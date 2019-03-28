@@ -1,8 +1,10 @@
-## react-draft-wysiwyg
-
-> react rich text
+## [react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg/issues/697)
 
 ### https://github.com/jpuri/react-draft-wysiwyg/issues/697
+
+> react rich text, better than others 
+
+----
 
 ```
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
