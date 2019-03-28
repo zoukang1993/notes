@@ -23,12 +23,19 @@
 code area
 ```
 
-**bold**
-_italic_
+后面俩字**加黑**
+后面三个字打上~~删除线~~
+后面俩字*斜体*
 
 
 [baidu](www.baidu.com)
 [超强大的云开发平台Coding](http://coding.net)
+https://github.com
+
+<example@gmail.com>
+
+### emoji
+:camel: :blush: :smile:
 
 
 ### table
@@ -42,6 +49,8 @@ aaaa | baaa | caaa
 ### devider line 
 ---
 ----
+***
+
 
 ### insert picture
 ![image](https://file.kuipmake.com/20190311153644-QQ图片20190124115258.jpg)
@@ -58,6 +67,11 @@ graph TD;
     E-->F;
     D-->F;
     F-->G;
+```
+
+```seq
+    A ->> B
+
 ```
 
 
