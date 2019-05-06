@@ -23,7 +23,7 @@
 })();
 
 or 
- trigger with url hava 'debug', example https://star.kuipmake.com?debug
+ trigger with url have 'debug', example https://star.kuipmake.com?debug
 
 <script>
     (function() {
