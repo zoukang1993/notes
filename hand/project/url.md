@@ -24,3 +24,8 @@ https://github.com/dvajs/dva/blob/master/README_zh-CN.md dva 教程
 http://hzerodevf.saas.hand-china.com/ 开发环境
 http://hzerof.saas.hand-china.com 测试环境
 
+#### gitlab
+https://rdc.hand-china.com
+
+####
+https://rdc.hand-china.com/gitlab/1265/going-buy
