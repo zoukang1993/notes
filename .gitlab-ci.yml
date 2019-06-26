@@ -1,0 +1,16 @@
+stages:
+    - build
+job1:
+    # 是否开启 debug 模式
+    # variables:
+    #     CI_DEBUG_TRACE: "true"
+    stage: build
+    tags:
+        - 新建 runner 的标签
+    only:
+        - develop
+    script:
+        - cd public
+        - npm i
+        - npm run build
+
