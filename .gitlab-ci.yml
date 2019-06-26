@@ -6,9 +6,9 @@ job1:
     #     CI_DEBUG_TRACE: "true"
     stage: build
     tags:
-        - 新建 runner 的标签
+        - notes
     only:
-        - develop
+        - master
     script:
         - cd public
         - npm i
