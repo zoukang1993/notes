@@ -10,7 +10,6 @@ job1:
     only:
         - master
     script:
-        - cd public
-        - npm i
-        - npm run build
+        - git checkout master
+        - git merge $CI_BUILD_REF_NAME
 
