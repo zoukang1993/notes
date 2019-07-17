@@ -2,7 +2,6 @@ stages:
     - build
 job1:
     variables:
-        CI_BUILD_REF_NAME: master
     stage: build
     tags:
         - notes
@@ -11,4 +10,5 @@ job1:
     script:
         - git checkout master
         - git merge $CI_BUILD_REF_NAME
+        - echo $CI_COMMIT_MESSAGE
 
