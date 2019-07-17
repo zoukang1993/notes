@@ -1,11 +1,8 @@
-variables:
-    CI_BUILD_REF_NAME: master
 stages:
     - build
 job1:
-    # 是否开启 debug 模式
-    # variables:
-    #     CI_DEBUG_TRACE: "true"
+    variables:
+        CI_BUILD_REF_NAME: master
     stage: build
     tags:
         - notes
