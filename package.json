@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "mermaid": "^8.0.0"
+  },
+  "name": "notes",
+  "devDependencies": {
+    "lerna": "^3.14.1"
   }
 }
