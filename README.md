@@ -34,6 +34,6 @@
 > - qiniu
 > - web
 
+--- 
 
-https://img.shields.io/amo/v/0.0.0.svg?color=red&label=notes&logo=zoukang1993&logoColor=yellow&style=for-the-badge
-
+![badge](https://img.shields.io/badge/notes-zoukang1993-yellowgreen.svg)
