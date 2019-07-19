@@ -4084,6 +4084,7 @@ read-pkg-up@^3.0.0:
     find-up "^2.0.0"
     read-pkg "^3.0.0"
 
+<<<<<<< HEAD
 read-pkg@^1.0.0:
   version "1.1.0"
   resolved "http://nexus.saas.hand-china.com/content/groups/srm-npm-group/read-pkg/-/read-pkg-1.1.0.tgz#f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
@@ -4092,6 +4093,12 @@ read-pkg@^1.0.0:
     load-json-file "^1.0.0"
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
+=======
+lodash@^4.17.11, lodash@^4.17.5:
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
+>>>>>>> 7b47708d3b8e90e063bc44e06315dcfb175eae74
 
 read-pkg@^3.0.0:
   version "3.0.0"
