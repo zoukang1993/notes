@@ -9,7 +9,7 @@ cd $location
 ls
 
 
-git checkout -b $branch
+git checkout $branch
 git add .
 git commit -m "${commitMessage}"
 git pull origin ${branch}
