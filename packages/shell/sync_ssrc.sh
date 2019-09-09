@@ -11,8 +11,8 @@ git pull origin test;
 
 function syncReleaseBranch() {
     echo "sync branch $1";
-    echo "----- git checkout -b $1 --------"
-    git checkout -b $1;
+    echo "----- git checkout $1 --------"
+    git checkout $1;
     echo "----- git pull $1 --------"
     git pull origin $1;
     echo "----- git merge test --------"
