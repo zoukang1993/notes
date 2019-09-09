@@ -1,9 +1,6 @@
 #!/bin/sh
 
-location="project/srm-front-ssrc/"
-
-cd ~
-cd $location
+cd ~/project/srm-front-ssrc/;
 ls
 
 git checkout test;

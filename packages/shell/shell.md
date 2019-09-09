@@ -18,4 +18,4 @@ chmod +x test.sh
 ubuntu: bash test.sh
 
 
-###
+### 使用crontab，让linux定时执行shell脚本
