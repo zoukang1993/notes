@@ -1,11 +1,9 @@
 #!/bin/sh
-read branch
-read commitMessage
+read -t 20 -p 'location branch and remote branch name: ' branch
+read -t 40 -p 'commit message: ' commitMessage
 
-location="project/srm-front-ssrc/"
 
-cd ~
-cd $location
+cd ~/project/srm-front-ssrc/;
 ls
 
 
