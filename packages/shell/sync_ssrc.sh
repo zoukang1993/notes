@@ -28,3 +28,5 @@ function syncAllBranch() {
 
 syncAllBranch;
 echo "------ result: $? -----------";
+
+git checkout ssrc-dev;
