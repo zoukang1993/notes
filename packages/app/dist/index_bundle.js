@@ -98,61 +98,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
 var ReactDOM = __webpack_require__(/*! react-dom */ "react-dom");
-var routes_1 = __webpack_require__(/*! ./routes/ */ "./src/routes/index.tsx");
+var routes_1 = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '@/routes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 ReactDOM.render(React.createElement(routes_1.default, { compiler: "TypeScript", framework: "React" }), document.getElementById("root"));
-
-
-/***/ }),
-
-/***/ "./src/routes/index.tsx":
-/*!******************************!*\
-  !*** ./src/routes/index.tsx ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "react");
-var Hello = /** @class */ (function (_super) {
-    __extends(Hello, _super);
-    function Hello(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            title: "entry",
-        };
-        return _this;
-    }
-    Hello.prototype.componentDidMount = function () {
-        document.title = this.state.title;
-    };
-    Hello.prototype.render = function () {
-        var _a = this.props, _b = _a.compiler, compiler = _b === void 0 ? '' : _b, _c = _a.framework, framework = _c === void 0 ? '' : _c;
-        console.log("entry", compiler, framework);
-        return React.createElement("h1", null,
-            "Hello from ",
-            compiler,
-            " and ",
-            framework,
-            "!");
-    };
-    return Hello;
-}(React.Component));
-exports.default = Hello;
 
 
 /***/ }),
