@@ -5,8 +5,8 @@
 echo "scanning start"
 pwd
 
-grep -R -i -n  "promptCode = *" */*.js > promptCode.txt;
-grep -R -i -n ".get(\`\${" */*.js > language.txt
+grep -R -i -n -H  "promptCode = *" *.js > promptCode.txt;
+grep -R -i -n -H ".get(\`\${" *.js > language.txt
 # grep -R -i -n "intl.get*" */*.js > language.txt
 
 echo "finished"

@@ -1,0 +1,17 @@
+index.js:594:        .get(`${promptCode}.message.confirm.remove`)
+index.js:679:      .get(`${promptCode}.view.message.modal.confirmChangeSourceTemplate`)
+index.js:774:      .get(`${promptCode}.view.message.modal.confirmChangeCompany`)
+index.js:1168:          .get(`${promptCode}.view.message.confirm。notDefineScoringElement`)
+index.js:1288:        message: intl.get(`${promptCode}.modal.bidHall.noSupplier`).d('没有供应商!'),
+index.js:2043:              .get(`${promptCode}.modal.bidHall.theFieldsNotComplete`)
+index.js:2080:              .get(`${promptCode}.modal.bidHall.theFieldsNotComplete`)
+index.js:2102:            .get(`${promptCode}.modal.bidHall.theFieldsNotComplete`)
+index.js:3084:          title={intl.get(`${promptCode}.view.message.title.bidMaintenance`).d('招标书维护')}
+index.js:3119:                      {intl.get(`${promptCode}.view.message.tab.bidMaintain`).d('招标维护')}
+index.js:3133:                    tab={intl.get(`${promptCode}.view.message.tab.baseInfos`).d('基本信息')}
+index.js:3139:                    tab={intl.get(`${promptCode}.view.message.tab.otherInfos`).d('其他信息')}
+index.js:3148:                        .get(`${promptCode}.view.message.tab.preQualification`)
+index.js:3160:                      tab={intl.get(`${promptCode}.view.message.tab.professional`).d('专家')}
+index.js:3171:                      tab={intl.get(`${promptCode}.view.message.tab.scoringElements`).d('评分要素')}
+index.js:3181:                    tab={intl.get(`${promptCode}.view.message.tab.supplierList`).d('供应商列表')}
+index.js:3189:                      tab={intl.get(`${promptCode}.view.message.tab.tenderNotice`).d('招标公告')}
