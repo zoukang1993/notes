@@ -1,10 +1,24 @@
+var path = require('path');
+const webpack = require('webpack'); // 用于访问内置插件
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // 通过 npm 安装
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+var ProgressBarPlugin = require('progress-bar-webpack-plugin');
+
+
 module.exports = {
     mode: "development",
     entry: "./src/index.tsx",
     output: {
-        filename: "bundle.js",
-        path: __dirname + "/dist"
+        path: path.resolve(__dirname, './dist'),
+        filename: 'index_bundle.js'
     },
+
+    plugins: [
+        new webpack.ProgressPlugin(),
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new ProgressBarPlugin(),
+    ],
 
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
