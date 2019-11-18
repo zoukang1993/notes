@@ -17,7 +17,7 @@ export default class Hello extends React.Component<HelloProps, HelloStates> {
     constructor(props: Readonly<HelloProps>) {
         super(props);
         this.state = {
-            title: "entry",
+            title: "app",
         };
     }
 
