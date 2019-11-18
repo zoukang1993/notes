@@ -1,9 +1,51 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+// import * as React from "react";
+// import * as ReactDOM from "react-dom";
+// import 'antd/dist/antd.css';
 
-import Hello from "./container/Mine";
+// import Hello from "./pages/Mine";
 
-ReactDOM.render(
-    <Hello compiler="TypeScript" framework="React" />,
-    document.getElementById("root")
-);
+// ReactDOM.render(
+//     <Hello compiler="TypeScript" framework="React" />,
+//     document.getElementById("root")
+// );
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Route from './router.js'
+// import FastClick from 'fastclick';
+// import registerServiceWorker from './registerServiceWorker';
+import { AppContainer } from 'react-hot-loader';
+import {Provider} from 'react-redux';
+import store from './store';
+// import './utils/setRem';
+// import './style/base.css';
+
+// FastClick.attach(document.body);
+
+// 监听state变化
+// store.subscribe(() => {
+//   console.log('store发生了变化');
+// });
+
+const render = Component => {
+  ReactDOM.render(
+    //绑定redux、热加载
+    <Provider store={store}>
+      <AppContainer>
+        <Component />
+      </AppContainer>
+    </Provider>,
+    document.getElementById('root'),
+  )
+}
+
+render(Route);
+
+// Webpack Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./router/', () => {
+    render(Route);
+  })
+}
+
+// registerServiceWorker();
