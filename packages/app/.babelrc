@@ -1,0 +1,15 @@
+{
+    "presets": [["env", {"modules": false}], "react"],
+    // "plugins": [
+    //     [
+    //         "import",
+    //         { "libraryName": "antd", "style": true },  // `style: true` for less
+    //         "antd"
+    //     ]
+    // ]
+    "plugins": ["react-hot-loader/babel", ["import", {
+        "libraryName": "antd", // 引入库名称
+        "libraryDirectory": "lib", // 来源,default: lib
+        "style": true // 全部,or 按需'css'
+    }]]
+}
