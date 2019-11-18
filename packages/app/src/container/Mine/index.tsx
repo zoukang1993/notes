@@ -30,7 +30,7 @@ export default class Hello extends React.Component<HelloProps, HelloStates> {
             compiler = '',
             framework = ''
         } = this.props
-        
+
         return(
             <div>
                 <h1>Hello from {compiler} and {framework}!</h1>
