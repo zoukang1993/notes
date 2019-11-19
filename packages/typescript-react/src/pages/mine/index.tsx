@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux';
+import {
+    fetchInfo,
+} from '../../actions/mine';
 
 export interface IMineProps {
     info: any;
@@ -26,13 +29,17 @@ class Mine extends React.Component<IMineProps, {}> {
     }
 }
 
-const mapStateToProps = (state: any): { info: any } => ({
-    info: state.info,
-});
+const mapStateToProps = (state: any): { info: any } => {
+    return {
+        info: state.mine.info,
+    };
+};
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-    onFetchInfo: () => dispatch({type: 'FETCH_INFO'}),
-});
+const mapDispatchToProps = (dispatch: Dispatch) => {
+    return {
+        onFetchInfo: () => dispatch(fetchInfo()),
+    };
+};
 
 const mine = connect(
     mapStateToProps,

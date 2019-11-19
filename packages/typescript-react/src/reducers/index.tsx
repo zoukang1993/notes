@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-import { mine } from './mine';
+import  mine from './mine';
 
 const app = combineReducers({
     mine,
