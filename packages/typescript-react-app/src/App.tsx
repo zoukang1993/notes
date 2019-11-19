@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 
-import CountCon from './container/CounterCon.tsx';
+import CountCon from './container/CounterCon';
 
 class App extends React.Component {
   public render() {

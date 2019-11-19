@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn run lint
+  /usr/bin/node /usr/bin/yarn start
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,13 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/zk/programs/notes/package.json: Unexpected token } in JSON at position 536
-      at JSON.parse (<anonymous>)
-      at /usr/lib/node_modules/yarn/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/usr/lib/node_modules/yarn/lib/cli.js:304:30)
-      at /usr/lib/node_modules/yarn/lib/cli.js:315:13
-      at <anonymous>
+  Error: EACCES: permission denied, open '/home/zk/.npmrc'
 
 npm manifest: 
   {
@@ -34,16 +28,19 @@ npm manifest:
     "version": "0.0.1",
     "name": "notes",
     "devDependencies": {
+      "@typescript-eslint/eslint-plugin": "^2.7.0",
+      "@typescript-eslint/parser": "^2.7.0",
       "awesome-typescript-loader": "^5.2.1",
       "cz-conventional-changelog": "^3.0.2",
       "eslint": "^6.6.0",
+      "eslint-loader": "^3.0.2",
+      "eslint-plugin-react": "^7.16.0",
       "lerna": "^3.14.1",
       "source-map-loader": "^0.2.4",
       "typescript": "^3.7.2"
     },
     "scripts": {
-      "lint": "eslint --ext .js src && npm run lint:style",
-      "commit": "git-cz",
+      "commit": "git-cz"
     },
     "config": {
       "commitizen": {

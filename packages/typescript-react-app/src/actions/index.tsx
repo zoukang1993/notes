@@ -1,3 +1,5 @@
+import { DECREMENT, INCREMENT } from '../constants';
+
 export interface IINCREMENTAction {
     type: INCREMENT;
 }
@@ -18,4 +20,4 @@ export const increment = (): IINCREMENTAction => ({
 // 减少 state 次数的方法
 export const decrement = (): IDECREMENTAction => ({
     type: DECREMENT
-});
+})
