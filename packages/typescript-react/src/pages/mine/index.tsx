@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Dispatch } from 'redux';
 import {
     fetchInfo,
-} from '../../actions/mine';
+} from '../../../actions/mine';
 
 export interface IMineProps {
     info: any;
@@ -13,6 +13,8 @@ export interface IMineProps {
 class Mine extends React.Component<IMineProps, {}> {
     constructor(props: IMineProps) {
         super(props);
+
+        this.state = {};
     }
 
     public componentDidMount() {

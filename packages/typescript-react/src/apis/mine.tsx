@@ -1,4 +1,3 @@
-
 export const fetchMineInfo = (): any => {
     return {
         age: 2,
@@ -6,4 +5,4 @@ export const fetchMineInfo = (): any => {
         id: 1,
         isOld: true,
     }
-}
+};
