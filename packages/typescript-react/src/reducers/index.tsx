@@ -4,8 +4,8 @@ import mine from './mine';
 import goods from './goods'
 
 const app = combineReducers({
-    mine,
     goods,
+    mine,
 });
 
 export default app;

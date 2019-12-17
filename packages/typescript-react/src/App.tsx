@@ -9,8 +9,8 @@ class App extends React.Component {
     public render() {
         return (
             <div className="App">
-                <Mine />
                 <Goods />
+                <Mine />
             </div>
         );
     }

@@ -1,10 +1,6 @@
-interface IGood {
-    readonly id: number,
-    readonly name: string,
-    readonly price: number,
-    readonly unit: string,
-    readonly [propNames: string]: any,
-}
+import {
+    IGood,
+} from '../constants/goods';
 
 const data: IGood[] = [
     {
@@ -21,7 +17,11 @@ const data: IGood[] = [
     },
 ];
 
-
 export const fetchGoodList = (): IGood[] => {
     return data;
+}
+
+export const fetchGoodItem = (id: number): IGood => {
+    const result = data.filter(item => item && item.id === id);
+    return result[0];
 }

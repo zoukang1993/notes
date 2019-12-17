@@ -1,12 +1,28 @@
-import { FETCH_GOODS_LIST } from '../constants/goods'
+import {
+    FETCH_GOODS_LIST,
+    FETCH_GOOD_ITEM,
+    IGood } from '../constants/goods'
 import {
     fetchGoodList,
+    fetchGoodItem,
 } from '../apis/goods';
 
 export const fetchGoods = () => {
+    const goodsList = fetchGoodList();
+
     return {
-        goodsList: fetchGoodList(),
+        goodsList,
         text: 'fetch_goods_list',
         type: FETCH_GOODS_LIST,
+    }
+}
+
+export const fetchGood = (id: number): IGood | {} => {
+    const goodItem = fetchGoodItem(id);
+
+    return {
+        goodItem,
+        text: 'fetch_good_item',
+        type: FETCH_GOOD_ITEM,
     }
 }

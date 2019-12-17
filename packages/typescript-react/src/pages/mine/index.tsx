@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Dispatch } from 'redux';
 import {
     fetchInfo,
-} from '../../../actions/mine';
+} from '../../actions/mine';
 
 export interface IMineProps {
     info: any;

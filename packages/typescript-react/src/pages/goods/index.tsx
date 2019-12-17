@@ -3,11 +3,13 @@ import { connect } from 'react-redux'
 import { Dispatch } from 'redux';
 import {
     fetchGoods,
-} from '../actions/goods';
+    fetchGood,
+} from '../../actions/goods';
 
 interface IGoodsProps {
     goodsList: any[],
-    onFetchGoodsList: () => void,
+    onFetchGoodsList: () => any,
+    onFetchGoodItem: (id: number) => void,
 }
 
 class Goods extends React.Component<IGoodsProps, {}> {
@@ -22,22 +24,41 @@ class Goods extends React.Component<IGoodsProps, {}> {
         onFetchGoodsList();
     }
 
+    public fetchGoodItem = (record: any = {}): void => {
+        const { id = null } = record;
+        const { onFetchGoodItem } = this.props;
+        onFetchGoodItem(id);
+    }
+
     public render() {
+        const { goodsList = [] } = this.props;
+        
         return(
-            <div>goods</div>
+            <div>
+                <h2>goods</h2>
+                <div>
+                    {goodsList && goodsList.map(item => {
+                        return(
+                            <div key={item.id.toString()} onClick={() => this.fetchGoodItem(item)}>{item.name}</div>
+                        )
+                    })}
+                </div>
+            </div>
         );
     }
 }
 
-const mapStateToProps = (state: any):{goodsList: any[]} => {
+const mapStateToProps = (state: any) => {
     return {
+        goodItem: state.goods.goodItem,
         goodsList: state.goods.goodsList,
     };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
+const mapDispatchToProps = (dispatch: Dispatch): any => {
     return{
-        onFetchGoodsList: dispatch(fetchGoods()),
+        onFetchGoodItem: (id: number) => dispatch(fetchGood(id)),
+        onFetchGoodsList: () => dispatch(fetchGoods()),
     };
 };
 
