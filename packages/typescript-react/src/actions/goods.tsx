@@ -1,7 +1,9 @@
 import {
     FETCH_GOODS_LIST,
     FETCH_GOOD_ITEM,
-    IGood } from '../constants/goods'
+    IGood,
+    // IGood,
+} from '../constants/goods'
 import {
     fetchGoodList,
     fetchGoodItem,
@@ -17,11 +19,11 @@ export const fetchGoods = () => {
     }
 }
 
-export const fetchGood = (id: number): IGood | {} => {
-    const goodItem = fetchGoodItem(id);
+export const fetchGood = (id: number): IGood | any => {
+    const goodsItem = fetchGoodItem(id);
 
     return {
-        goodItem,
+        goodsItem,
         text: 'fetch_good_item',
         type: FETCH_GOOD_ITEM,
     }

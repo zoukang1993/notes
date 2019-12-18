@@ -8,6 +8,7 @@ import {
 
 interface IGoodsProps {
     goodsList: any[],
+    goodsItem: any,
     onFetchGoodsList: () => any,
     onFetchGoodItem: (id: number) => void,
 }
@@ -31,8 +32,9 @@ class Goods extends React.Component<IGoodsProps, {}> {
     }
 
     public render() {
-        const { goodsList = [] } = this.props;
-        
+        const { goodsList = [], goodsItem = {} } = this.props;
+        console.log(goodsItem);
+
         return(
             <div>
                 <h2>goods</h2>
@@ -50,12 +52,12 @@ class Goods extends React.Component<IGoodsProps, {}> {
 
 const mapStateToProps = (state: any) => {
     return {
-        goodItem: state.goods.goodItem,
+        goodsItem: state.goods.goodsItem,
         goodsList: state.goods.goodsList,
     };
 };
 
-const mapDispatchToProps = (dispatch: Dispatch): any => {
+const mapDispatchToProps = (dispatch: Dispatch) => {
     return{
         onFetchGoodItem: (id: number) => dispatch(fetchGood(id)),
         onFetchGoodsList: () => dispatch(fetchGoods()),

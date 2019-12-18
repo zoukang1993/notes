@@ -1,5 +1,6 @@
 const initData = {
-    goodsList: [],
+    goodsItem: {}, // goods list
+    goodsList: [], // goods item
 }
 
 export default function goods(state = initData, action: any): any {
@@ -7,7 +8,7 @@ export default function goods(state = initData, action: any): any {
         case 'FETCH_GOODS_LIST':
             return Object.assign({}, state, { goodsList: action.goodsList });
         case 'FETCH_GOOD_ITEM':
-            return Object.assign({}, state, { goodItem: action.goodItem });
+            return Object.assign({}, state, { goodsItem: action.goodsItem });
         default:
             return state;
     }
