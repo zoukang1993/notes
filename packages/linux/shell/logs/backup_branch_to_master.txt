@@ -1,0 +1,25 @@
+=============backup ssrc to master============
+2020年 01月 02日 星期四 14:21:58 CST
+Switched to branch 'develop'
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              master     -> FETCH_HEAD
+Already up to date.
+Already up to date.
+Everything up-to-date
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+========================END========================
