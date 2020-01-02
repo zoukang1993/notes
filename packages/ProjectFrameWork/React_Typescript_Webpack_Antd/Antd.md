@@ -15,6 +15,8 @@ yarn add antd
 ```
 
 ### 两个工具库
+> [react-app-rewired](https://github.com/timarney/react-app-rewired)
+> [customize-cra](https://github.com/arackaf/customize-cra)
 ```
 yarn add react-app-rewired customize-cra
 ```
