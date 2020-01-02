@@ -32,8 +32,7 @@ class Goods extends React.Component<IGoodsProps, {}> {
     }
 
     public render() {
-        const { goodsList = [], goodsItem = {} } = this.props;
-        console.log(goodsItem);
+        const { goodsList = [], } = this.props;
 
         return(
             <div>
