@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from 'antd/es/button';
+import { Button } from 'antd';
 
 import Mine from './pages/mine';
 import Goods from './pages/goods';

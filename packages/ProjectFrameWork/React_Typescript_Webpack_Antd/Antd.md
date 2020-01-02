@@ -10,12 +10,47 @@ npm install less sass less-loader sass-loader stylus-loader node-sass --save-dev
 ----
 
 ### antd
-> yarn add antd
+```
+yarn add antd
+```
+
+### 两个工具库
+```
+yarn add react-app-rewired customize-cra
+```
+
+package.json
+```
+/* package.json */
+"scripts": {
+-   "start": "react-scripts start",
++   "start": "react-app-rewired start",
+-   "build": "react-scripts build",
++   "build": "react-app-rewired build",
+-   "test": "react-scripts test",
++   "test": "react-app-rewired test",
+}
+```
 
 #### 按需加载组件代码和样式
+```
 yarn add babel-plugin-import
+```
 
-.babelrc
+### config-overrides.js
+```
+const { override, fixBabelImports } = require('customize-cra');
+
+module.exports = override(
+    fixBabelImports('import', {
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: 'css',
+    }),
+);
+```
+
+### .babelrc
 ```
 {
   "presets": [
@@ -35,7 +70,7 @@ yarn add babel-plugin-import
 }
 ```
 
-##### loader
+#### loader
 ```
  {
         test: /\.css$/,
