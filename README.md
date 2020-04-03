@@ -37,3 +37,7 @@
 --- 
 [top](#note)
 
+
+### new
+- cd packages/
+- npm init -y
