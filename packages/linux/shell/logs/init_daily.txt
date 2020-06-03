@@ -1,0 +1,1038 @@
+=========upgrade and update system==========
+2019年 12月 26日 星期四 09:31:15 CST
+Get:1 http://packages.microsoft.com/repos/vscode stable InRelease [3,959 B]
+Hit:2 http://archive.ubuntukylin.com:10006/ubuntukylin xenial InRelease
+Ign:3 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:4 http://dl.winehq.org/wine-builds/ubuntu bionic InRelease
+Hit:5 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:6 http://linux.teamviewer.com/deb stable InRelease
+Hit:7 http://dl.google.com/linux/chrome/deb stable Release
+Hit:8 http://archive.canonical.com/ubuntu bionic InRelease
+Hit:9 https://deb.nodesource.com/node_8.x bionic InRelease
+Hit:10 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Get:11 https://packages.microsoft.com/ubuntu/18.04/prod bionic InRelease [4,003 B]
+Hit:12 http://cn.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:15 http://cn.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:16 http://cn.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:17 https://deb.opera.com/opera-stable stable InRelease
+Ign:14 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic InRelease
+Get:18 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic Release [22.4 kB]
+Get:19 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic Release.gpg [836 B]
+Fetched 31.2 kB in 35s (880 B/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages have been kept back:
+  libodbc1
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+==================svn update==================
+Updating '.':
+A    30 功能设计/SCEC目录化采购/华彬
+A    30 功能设计/SCEC目录化采购/华彬/商品分享优化定稿.rp
+U    30 功能设计/SSRC寻源管理/广日物流/广日物流产品标准化V0.2.rp
+U    30 功能设计/SPCM采购协议/采购协议V1.4.rp
+U    35 表设计/产品平台&SRM_SSRC寻源管理_表设计1.0.xls
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-配置中心勾选审批-审批拒绝-站内消息.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单拆分行且发运行创建多个送货单-回传内向交货单-跨订单部分接收（101）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-送货单查询-查询-供应商查询.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-客户收货记录-查询-来源送货单号.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-跨内向交货单部分全部接收-自动关闭.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-配置中心勾选审批-复审拒绝-站内消息.jmx
+==================hzero-front===============
+Your branch is up to date with 'origin/develop'.
+Updating e7e1bca0a..e280d2b56
+Fast-forward
+ .eslintignore                                      |    2 +
+ .eslintrc.ts.js                                    |  142 +++
+ package.json                                       |   10 +-
+ packages/hzero-front-hiam/locale/locale.zh_CN.yaml |    1 +
+ .../src/routes/ApiManagement/index.js              |   48 +-
+ .../src/routes/CustomerManagement/index.js         |   10 +-
+ .../src/routes/MenuConfig/PermissionSet/index.js   |    2 +-
+ .../src/routes/MissPermissionRecord/index.js       |    2 +-
+ .../routes/RoleManagement/AssignSecGrp/index.js    |    2 +-
+ .../src/routes/SecurityGroup/Detail/CardTab.js     |   22 +-
+ .../Detail/DataPermissionTab/Company.js            |   13 +-
+ .../Detail/FieldPermissionTab/Drawer.js            |   17 +-
+ .../src/services/roleManagementService.js          |    2 +-
+ .../src/services/securityGroupService.js           |    6 +-
+ .../src/stores/missPermissionRecordDS.js           |    5 +-
+ .../src/routes/KnowledgeCategory/Detail/index.js   |   47 +-
+ .../src/routes/KnowledgeCategory/index.js          |   17 +-
+ .../src/routes/MessageCenter/ChatDrawer.js         |   14 +-
+ .../src/routes/MessageCenter/Content/Chat.js       |  108 +-
+ .../src/routes/MessageCenter/SendMessage/index.js  |   94 +-
+ .../src/routes/MessageCenter/index.js              |   13 +-
+ .../src/stores/knowledgeCategoryDS.js              |   10 +-
+ .../hzero-front-hims/src/stores/messageCenterDS.js |   11 +-
+ .../src/routes/UserMessage/MessageDetail/index.js  |    6 +-
+ .../src/routes/NewOrganization/Company/index.js    |  149 ++-
+ .../src/routes/NewOrganization/Department/index.js |  156 +--
+ .../src/routes/NewOrganization/Job/index.js        |  153 +--
+ .../src/routes/NewOrganization/Position/index.js   |  559 ++++++++++
+ .../src/routes/NewOrganization/index.js            |   14 +-
+ .../TemplateManage/Detail/TemplateLineDrawer.js    |    2 +-
+ .../hzero-front-hrpt/src/stores/labelTemplateDS.js |    1 +
+ packages/hzero-front/config/apiConfig.js           |    3 +
+ .../src/components/Authorized/WrapAuthorized.js    |    6 +-
+ .../src/components/Authorized/index.d.ts           |    2 +
+ .../src/components/CacheComponent/index.d.ts       |    1 +
+ .../hzero-front/src/components/Compose/index.d.ts  |   45 +
+ .../src/components/CountDown/index.d.ts            |    1 +
+ .../src/components/Exception/index.d.ts            |    1 +
+ .../src/components/GlobalFooter/index.d.ts         |    1 +
+ .../hzero-front/src/components/Login/index.d.ts    |    6 +
+ .../src/components/NoticeIcon/NoticeIconTab.d.ts   |    1 +
+ .../src/components/PageHeader/index.d.ts           |    1 +
+ .../hzero-front/src/components/Result/index.d.ts   |    1 +
+ .../src/components/TagSelect/index.d.ts            |    1 +
+ .../src/layouts/CommonLayout/mixins.less           |    2 +-
+ .../DefaultNoticeIcon/NoticeIconTab.d.ts           |    1 +
+ .../components/DefaultNoticeIcon/NoticeList.js     |    4 +-
+ .../layouts/components/DefaultNoticeIcon/index.js  |   16 +-
+ packages/hzero-front/src/utils/authority.js        |    8 -
+ packages/hzero-front/src/utils/config.js           |    6 +
+ .../src/utils/{constants.js => constants.ts}       |    0
+ .../hzero-front/src/utils/customize/helpers.js     |  260 -----
+ .../hzero-front/src/utils/customize/helpers.ts     |  276 +++++
+ packages/hzero-front/src/utils/customize/index.js  |  284 -----
+ packages/hzero-front/src/utils/customize/index.ts  |  276 +++++
+ .../hzero-front/src/utils/intl/LocaleSelect.js     |   36 -
+ packages/hzero-front/src/utils/intl/MenuSelect.js  |  109 --
+ .../src/utils/intl/formatterCollections.js         |    5 -
+ packages/hzero-front/src/utils/notification.js     |   77 --
+ packages/hzero-front/src/utils/notification.ts     |   84 ++
+ .../hzero-front/src/utils/{regExp.js => regExp.ts} |    0
+ packages/hzero-front/src/utils/utils.tsx           | 1083 --------------------
+ packages/hzero-front/src/utils/utils/common.tsx    |  317 ++++++
+ packages/hzero-front/src/utils/utils/file.tsx      |   42 +
+ packages/hzero-front/src/utils/utils/index.tsx     |   10 +
+ .../hzero-front/src/utils/utils/pagination.tsx     |  175 ++++
+ packages/hzero-front/src/utils/utils/password.tsx  |   73 ++
+ packages/hzero-front/src/utils/utils/routers.tsx   |  158 +++
+ packages/hzero-front/src/utils/utils/storage.tsx   |   30 +
+ packages/hzero-front/src/utils/utils/time.tsx      |  115 +++
+ packages/hzero-front/src/utils/utils/token.tsx     |   53 +
+ packages/hzero-front/src/utils/utils/url.tsx       |   46 +
+ packages/hzero-front/src/utils/utils/user.tsx      |   90 ++
+ packages/hzero-front/src/utils/withProps.tsx       |   19 +-
+ src/{index.js => index.tsx}                        |    0
+ src/{setupProxy.js => setupProxy.ts}               |    0
+ yarn.lock                                          |  135 ++-
+ 77 files changed, 3302 insertions(+), 2196 deletions(-)
+ create mode 100644 .eslintrc.ts.js
+ create mode 100644 packages/hzero-front-hpfm/src/routes/NewOrganization/Position/index.js
+ delete mode 100644 packages/hzero-front/src/utils/authority.js
+ rename packages/hzero-front/src/utils/{constants.js => constants.ts} (100%)
+ delete mode 100644 packages/hzero-front/src/utils/customize/helpers.js
+ create mode 100644 packages/hzero-front/src/utils/customize/helpers.ts
+ delete mode 100644 packages/hzero-front/src/utils/customize/index.js
+ create mode 100644 packages/hzero-front/src/utils/customize/index.ts
+ delete mode 100644 packages/hzero-front/src/utils/intl/LocaleSelect.js
+ delete mode 100644 packages/hzero-front/src/utils/intl/MenuSelect.js
+ delete mode 100644 packages/hzero-front/src/utils/notification.js
+ create mode 100644 packages/hzero-front/src/utils/notification.ts
+ rename packages/hzero-front/src/utils/{regExp.js => regExp.ts} (100%)
+ delete mode 100644 packages/hzero-front/src/utils/utils.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/common.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/file.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/index.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/pagination.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/password.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/routers.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/storage.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/time.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/token.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/url.tsx
+ create mode 100644 packages/hzero-front/src/utils/utils/user.tsx
+ rename src/{index.js => index.tsx} (100%)
+ rename src/{setupProxy.js => setupProxy.ts} (100%)
+=============================END==================================
+=========upgrade and update system==========
+2019年 12月 27日 星期五 09:30:01 CST
+[sudo] password for zk: Hit:1 http://linux.teamviewer.com/deb stable InRelease
+Get:2 http://archive.ubuntukylin.com:10006/ubuntukylin xenial InRelease [18.1 kB]
+Ign:3 http://dl.google.com/linux/chrome/deb stable InRelease
+Get:4 https://packages.microsoft.com/ubuntu/18.04/prod bionic InRelease [4,003 B]
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+Hit:6 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:7 http://dl.winehq.org/wine-builds/ubuntu bionic InRelease
+Get:8 http://packages.microsoft.com/repos/vscode stable InRelease [3,959 B]
+Hit:9 http://archive.canonical.com/ubuntu bionic InRelease
+Get:11 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Hit:12 https://deb.nodesource.com/node_8.x bionic InRelease
+Hit:13 https://deb.opera.com/opera-stable stable InRelease
+Get:14 http://security.ubuntu.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [38.6 kB]
+Hit:15 http://cn.archive.ubuntu.com/ubuntu bionic InRelease
+Get:16 http://security.ubuntu.com/ubuntu bionic-security/main DEP-11 64x64 Icons [41.5 kB]
+Get:17 http://cn.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:18 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [42.1 kB]
+Get:19 http://security.ubuntu.com/ubuntu bionic-security/universe DEP-11 64x64 Icons [111 kB]
+Get:20 http://cn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:21 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Get:22 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [295 kB]
+Get:23 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [73.8 kB]
+Get:24 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [143 kB]
+Get:25 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [264 kB]
+Get:26 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [200 kB]
+Get:27 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [444 kB]
+Get:28 http://cn.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:29 http://cn.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [7,980 B]
+Err:30 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic InRelease
+  Could not connect to packages.gitlab.com:443 (54.153.54.194), connection timed out
+Fetched 1,945 kB in 30s (64.0 kB/s)
+Reading package lists...
+W: Failed to fetch https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu/dists/bionic/InRelease  Could not connect to packages.gitlab.com:443 (54.153.54.194), connection timed out
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages have been kept back:
+  libodbc1
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+==================svn update==================
+Updating '.':
+U    30 功能设计/PMD移动端/子应用开发_MVP1/场景故事/甄云_移动端-迭代1场景故事V1.1.xlsx
+A    30 功能设计/SSRC寻源管理/产品中心迭代/12月/产品标准化V3.8（报价大厅）.rp
+A    30 功能设计/SSRC寻源管理/产品中心迭代/12月/产品标准化V3.9（批量添加供应商）.rp
+D    30 功能设计/SSRC寻源管理/广日物流/广日物流产品标准化V0.2.rp
+A    30 功能设计/SSRC寻源管理/广日物流/历史文档
+A    30 功能设计/SSRC寻源管理/广日物流/历史文档/广日物流产品标准化V0.2.rp
+A    30 功能设计/SSRC寻源管理/广日物流/广日物流产品标准化V0.3.rp
+U    产品平台SRM升级_总体计划1.5.xls
+U    50 测试管理/版本发布/历史版本.xlsx
+A    50 测试管理/版本发布/191225
+A    50 测试管理/版本发布/191225/甄云SRM新产品功能测试报告V1.4.12.docx
+A    50 测试管理/版本发布/191222
+A    50 测试管理/版本发布/191222/甄云SRM新产品功能测试报告V1.4.11.docx
+U    50 测试管理/自动化/SRM/TestSuite/TestSuite(Smoke).jmx
+U    50 测试管理/自动化/SRM/TestSuite/TestSuite(High).jmx
+U    50 测试管理/自动化/SRM/TestCase/目录化商城/采购员-目录化商品下单流程.jmx
+U    50 测试管理/自动化/SRM/TestCase/合作伙伴管理-我的合作伙伴/租户管理员-导入ERP-状态待导入-多条导入功能.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单创建-创建-并单创建.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，勾选单次接收即关闭-发运行满额创建-部分接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-送货单拆分行-满额接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-跨内向交货单全部接收.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-接收-相同供应商，相同送货单类型多个接收预览.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行拆分多送货单创建-取消送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-送货单拆分行-部分接收-关闭送货单-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-不拆分创建-部分接收冲销.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-配置中心勾选ERP接收，不勾选审批，勾选送货单回传ERP，勾选单次接收即关闭-送货单拆分行创建-内向交货单部分接收.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨内向交货单部分接收（103）-再跨内向交货单全部入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨内向交货单部分接收(103)-再跨内向交货单部分入库(105)-送货单2关闭-跨内向交货单全部冲销（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-先订单部分冲销至接收106-再订单部分冲销至供应商104.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单部分冲销至接收（106）-再订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先订单全部接收103-再订单部分入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单全部冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，勾选单次接收即关闭-发运行部分创建-部分全部接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行部分创建-跨内向交货单全部接收.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先订单全部接收103-再跨订单全部入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-配置中心勾选ERP接收，不勾选审批，勾选送货单回传ERP，不勾选单次接收即关闭-送货单拆分行创建-跨内向交货单部分接收-关闭送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-跨内向交货单部分全部接收-自动关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先订单全部冲销至接收（106）-再跨订单全部冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单部分冲销至接收（106）-再订单全部冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单全部冲销至接收（106）-再订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/配置中心勾选审批-送货单复审-查询有数据.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先订单全部接收：订单全部（103）-再订单部分入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先订单部分接收103-再订单全部入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-发运行拆分多送货单创建-部分接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-先订单全部冲销至接收106-再跨订单部分冲销至供应商104.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行部分创建-内向交货单全部接收-自动关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先订单部分接收103-再跨订单全部入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单拆分行且发运行创建多个送货单-回传内向交货单-订单部分接收（101）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先内向交货单部分接收（103）-再内向交货单部分入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，勾选审批-发运行拆分多送货单创建-拒绝审批-作废-接收.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单全部接收103-再跨订单部分入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-取消送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨内向交货单全部接收（103）-再内向交货单部分入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行部分创建-跨内向交货单部分接收-关闭送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-发运行拆分多送货单创建-部分全部接收-关闭送货单-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单维护-删除-新建删除.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-配置中心不勾选审批-关闭送货单-站内消息.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨内向交货单全部接收（103）-再跨内向交货单全部入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行发运行创建多个送货单-不勾选送货单提交回传ERP-订单全部接收：订单的全部（101）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单全部冲销至接收（106）-再订单全部冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，勾选单次接收即关闭-送货单拆分行-部分全部接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单创建-删除流程.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-先跨订单全部冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，勾选单次接收即关闭-发运行满额创建-满额接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单全部接收103-再订单全部入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-订单全部接收（101）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/勾选审批-送货单拆分行创建-审批拒绝-再次提交-审批通过-复审通过-关闭送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行创建送货单-回传内向交货单-勾选送货单单次接收后自动关闭-内向交货单部分接收入库（101）-内向交货单部分冲销至供应商（102）-送货单关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-勾选送货单单次接收后自动关闭-订单部分接收入库（101）-订单部分冲销至供应商（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单维护-多个提交.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-配置中心勾选审批-审批拒绝-站内消息.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行部分创建-内向交货单部分全部接收-关闭送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-先订单全部冲销至接收（106）-再订单全部冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先内向交货单部分接收（103）-再跨内向交货单部分入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单创建-提交流程.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-配置中心勾选审批-复审拒绝-站内消息.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/勾选审批-送货单拆分行创建-拒绝审批-作废-创建送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-跨内向交货单全部直接冲销至供应商（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行发运行创建多个送货单-不勾选送货单提交回传ERP-订单部分接收：送货单1接全接，送货单2接部分（101）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-订单部分冲销至供应商（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行拆分多送货单创建-内向交货单全部接收.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-先跨订单全部冲销至接收（106）-再订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨订单部分接收（103）-再跨订单部分入库（105）-订单全部直接冲销至供应商（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-先订单全部冲销至接收106-再订单全部冲销至供应商104.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，勾选单次接收即关闭-送货单拆分行-满额接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-订单全部直接冲销至供应商（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-送货单拆分行-部分接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-接收-接收预览-新建.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-发运行拆分多送货单创建-满额接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-发运行拆分多送货单创建-部分接收-关闭送货单-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行拆分多送货单创建-跨内向交货单部分全部接收-自动关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单拆分行且发运行创建多个送货单-回传内向交货单-跨订单部分接收（101）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/配置中心不勾选审批-送货单复审-查询为空.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先内向交货单全部接收（103）-再跨内向交货单部分入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-全部接收冲销.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行发运行创建多个送货单-不勾选送货单提交回传ERP-订单部分接收：送货单1接部分，送货单2不接（101）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-跨订单部分直接冲销至供应商（102）-送货单关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收101-先跨订单部分冲销至接收106-再跨订单部分入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨内向交货单全部接收（103）-再跨内向交货单部分入库（105）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-先跨订单全部冲销至接收（106）-再订单全部冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单创建-取消流程.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先订单全部接收：订单全部（103）-再订单全部入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨订单部分接收（103）-再跨订单部分入库（105）-跨订单部分直接冲销至供应商（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行拆分多送货单创建-内向交货单部分接收-关闭送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-再跨订单部分冲销至接收106-再跨订单部分入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-内向交货单部分接收-自动关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再订单部分入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-发运行满额创建-部分接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单全部入库105.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-跨订单部分接收103-跨订单部分冲销至供应商104.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单全部接收（101）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先订单部分冲销至接收（106）-再订单全部冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先订单全部冲销至接收（106）-再订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-跨内向交货单部分全部接收-关闭送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收101-跨订单部分冲销至供应商102.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，勾选单次接收即关闭-发运行拆分多送货单创建-部分全部接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-跨订单全部直接冲销至供应商（102）-送货单取消关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-内向交货单全部直接冲销至供应商（102）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-内向交货单部分全部接收-自动关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/勾选审批-送货单发运行拆分多送货单创建-审批拒绝-再次提交-审批通过-复审拒绝-审批通过-复审通过-关闭送货单.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-送货单拆分行-部分全部接收-关闭送货单-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先订单全部冲销至接收（106）-再订单全部冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，勾选单次接收即关闭-发运行拆分多送货单创建-部分接收-全部冲销-取消.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-先订单部分冲销至接收106-再订单全部冲销至供应商104.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-配置中心勾选ERP接收，不勾选审批，勾选送货单回传ERP，勾选单次接收即关闭-送货单拆分行创建-跨内向交货单部分接收.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方-冲销-查询-收货组织查询.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方-接收-查询-送货单类型查询.jmx
+svn: E000036: Can't check path '/home/zk/project/svn/50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先订单部分接收：送货单1接满，送货单2接部分（103）-再跨订单全部入库（105）-先跨订单部分冲销至接收（106）-再订跨订单部分冲销至供应商（104）.jmx': File name too long
+==================hzero-front===============
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+   e280d2b56..62dbaba4d  develop    -> origin/develop
+Updating e280d2b56..62dbaba4d
+Fast-forward
+ .../src/models/hadmZuulRateLimit.js                |  25 +-
+ .../src/routes/APILimit/ViewMonitor.js             |  12 +-
+ .../hzero-front-hadm/src/routes/APILimit/index.js  |  49 +-
+ .../routes/ZuulRateLimit/RateLimitDetail/index.js  |  21 +-
+ .../src/services/zuulRateLimitService.js           |  18 +
+ packages/hzero-front-hadm/src/stores/apiLimitDS.js |  41 +-
+ packages/hzero-front-hchg/locale/locale.zh_CN.yaml |   2 +-
+ .../src/routes/PurchaseDetail/Detail/DetailForm.js |   4 +-
+ .../src/routes/PurchaseDetail/Detail/index.js      |   2 +-
+ .../src/routes/PurchaseDetail/List/ListTable.js    |   2 +-
+ .../src/routes/PurchaseDetail/List/index.js        |   2 +-
+ .../src/routes/ServiceBill/index.js                |   2 +-
+ .../ServiceCharge/Detail/RuleDrawer/RuleTable.js   |   2 +-
+ .../src/routes/MissPermissionRecord/Detail.js      |   6 +-
+ .../Detail/DataPermissionTab/index.js              |  14 +-
+ .../routes/SecurityGroup/Detail/DimensionTab.js    |   6 +-
+ .../src/routes/MessageCenter/ChatDrawer.js         |   3 +
+ .../src/routes/MessageCenter/Content/Chat.js       |  73 ++-
+ .../src/routes/MessageCenter/Content/index.js      |   2 +
+ .../src/routes/MessageCenter/Content/index.less    |   6 +-
+ .../src/routes/MessageCenter/SendMessage/index.js  |  60 +++
+ .../src/routes/MessageCenter/index.js              |  77 ++-
+ .../hzero-front-hims/src/stores/messageCenterDS.js |   7 +-
+ .../src/routes/AuditConfig/Drawer.js               |   9 +
+ .../src/routes/AuditConfig/index.js                |   6 +
+ .../hzero-front-hmsg/src/routes/Email/EmailForm.js |  71 +--
+ .../routes/Notice/SystemNoticePublishAddDrawer.js  |   4 +-
+ .../src/routes/NewOrganization/Company/index.js    |   2 +-
+ .../src/routes/NewOrganization/Department/index.js |   3 +-
+ .../src/routes/NewOrganization/Job/index.js        | 559 ---------------------
+ .../src/routes/NewOrganization/Position/index.js   |   3 +-
+ packages/hzero-front-hpfm/src/stores/positionDS.js |  11 +-
+ .../routes/LabelTemplate/AssignPermission/index.js |  13 +-
+ .../src/routes/LabelTemplate/Detail/index.js       |   8 +-
+ .../components/LabelCKEditor/index.js              |  71 ++-
+ .../src/routes/LabelTemplate/index.js              |  21 +-
+ .../src/layouts/CommonLayout/mixins.less           | 117 +++--
+ .../layouts/components/DefaultNoticeIcon/index.js  |   2 +-
+ 38 files changed, 467 insertions(+), 869 deletions(-)
+ delete mode 100644 packages/hzero-front-hpfm/src/routes/NewOrganization/Job/index.js
+Can't find Husky, skipping post-merge hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+=======================END=====================
+=========upgrade and update system==========
+2019年 12月 30日 星期一 09:30:01 CST
+[sudo] password for zk: Get:1 http://packages.microsoft.com/repos/vscode stable InRelease [3,959 B]
+Hit:2 http://archive.ubuntukylin.com:10006/ubuntukylin xenial InRelease
+Ign:3 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:4 http://linux.teamviewer.com/deb stable InRelease
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+Hit:6 https://download.docker.com/linux/ubuntu bionic InRelease
+Get:7 https://packages.microsoft.com/ubuntu/18.04/prod bionic InRelease [4,003 B]
+Hit:9 http://archive.canonical.com/ubuntu bionic InRelease
+Hit:10 https://deb.nodesource.com/node_8.x bionic InRelease
+Hit:12 http://dl.winehq.org/wine-builds/ubuntu bionic InRelease
+Hit:13 http://cn.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:14 http://cn.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:15 http://security.ubuntu.com/ubuntu bionic-security InRelease
+Hit:16 http://cn.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:17 https://deb.opera.com/opera-stable stable InRelease
+Ign:11 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic InRelease
+Err:18 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic Release
+  Could not wait for server fd - select (11: Resource temporarily unavailable) [IP: 13.33.9.61 443]
+Reading package lists...
+E: The repository 'https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic Release' no longer has a Release file.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages have been kept back:
+  libodbc1
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+==================svn update==================
+Updating '.':
+U    50 测试管理/自动化/SRM/Function/采购管理-需求管理/需求创建并分配.jmx
+A    50 测试管理/自动化/SRM/Function/销售管理-送货协同/105跨订单有送货单入库后查询适配关闭.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先订单全部接收：订单全部（103）-再订单全部入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先订单全部接收：订单全部（103）-再订单部分入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-按明细查询-查询-全部为空.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方-接收-查询-订单号查询.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-按明细查询-送货单号查询.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-送货单审批-公司查询.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/租户管理员-我的收货记录-权限分配功能.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/租户管理员-我的收货记录-权限回收功能.jmx
+svn: E000036: Can't check path '/home/zk/project/svn/50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-内向交货单部分冲销至接收（106）-内向交货单部分冲销至供应商（104）.jmx': File name too long
+==================hzero-front===============
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+   62dbaba4d..7184cba23  develop    -> origin/develop
+Updating 62dbaba4d..7184cba23
+Fast-forward
+ .../src/models/hadmZuulRateLimit.js                |   3 +
+ .../RateLimitDetail/DetailForm/EditForm.js         |  11 +
+ .../routes/ZuulRateLimit/RateLimitDetail/index.js  |   9 +-
+ .../src/routes/ServiceBill/FilterForm.js           |   2 +-
+ .../src/routes/ServiceBill/ListTable.js            |   2 +-
+ .../ServiceCharge/Detail/RuleDrawer/RuleForm.js    |  61 ++-
+ .../src/components/FileChunkUploader/index.js      |  99 +++++
+ .../src/components/FileChunkUploader/type.d.ts     |  38 ++
+ .../src/customize/customizeHfle.js                 |   3 +
+ packages/hzero-front-hfile/src/customize/index.js  |   1 +
+ .../src/routes/FileAggregate/FileUploadModal.js    |  57 ++-
+ packages/hzero-front-hfile/src/utils/router.js     |   5 +-
+ packages/hzero-front-hiam/src/models/menuConfig.js |  10 +-
+ .../src/routes/MenuConfig/Editor/index.js          |  56 ++-
+ .../src/routes/MissPermissionRecord/index.js       |   2 +-
+ .../src/routes/UserInfo/UserReceiveConfig.js       |   9 +-
+ .../src/stores/missPermissionRecordDS.js           |   4 +-
+ packages/hzero-front-hims/src/routes/IM/index.js   |  30 +-
+ .../src/routes/MessageCenter/ChatDrawer.js         |   2 +
+ .../src/routes/MessageCenter/Content/Chat.js       |  60 ++-
+ .../src/routes/MessageCenter/Content/index.js      |   2 +
+ .../src/routes/MessageCenter/index.js              |  38 +-
+ .../src/routes/NewOrganization/Company/index.js    |  30 +-
+ .../Department/CreateEmployeeDrawer.js             | 149 +++++++
+ .../routes/NewOrganization/Department/Detail.js    | 145 +++++++
+ .../src/routes/NewOrganization/Department/index.js | 442 ++++++++++++++-------
+ .../src/routes/NewOrganization/Position/index.js   |  37 +-
+ .../src/routes/NewOrganization/index.js            |   1 -
+ .../src/routes/ServerDefine/index.js               |   2 +-
+ .../src/services/newOrganizationService.js         |  32 ++
+ packages/hzero-front-hpfm/src/stores/companyDS.js  |   1 +
+ .../hzero-front-hpfm/src/stores/departmentDS.js    | 175 +++++---
+ packages/hzero-front-hpfm/src/stores/positionDS.js |   2 +
+ .../routes/LabelTemplate/PrintSettings/index.js    |  14 +-
+ .../src/components/FileChunkUploader/index.tsx     |  17 +
+ .../src/components/FileChunkUploader/type.d.ts     |  38 ++
+ packages/hzero-front/src/customize/hfle.tsx        |  53 +++
+ .../layouts/components/DefaultNoticeIcon/index.js  |  56 ++-
+ .../components/DefaultNoticeIcon/index.less        |  19 +
+ packages/hzero-front/src/models/global.js          |  10 +
+ .../hzero-front/src/routes/TokenExpired/index.js   |  28 +-
+ packages/hzero-front/src/services/api/message.ts   |  25 ++
+ .../hzero-front/src/utils/customize/helpers.ts     |   6 +-
+ 43 files changed, 1418 insertions(+), 368 deletions(-)
+ create mode 100644 packages/hzero-front-hfile/src/components/FileChunkUploader/index.js
+ create mode 100644 packages/hzero-front-hfile/src/components/FileChunkUploader/type.d.ts
+ create mode 100644 packages/hzero-front-hfile/src/customize/customizeHfle.js
+ create mode 100644 packages/hzero-front-hfile/src/customize/index.js
+ create mode 100644 packages/hzero-front-hpfm/src/routes/NewOrganization/Department/CreateEmployeeDrawer.js
+ create mode 100644 packages/hzero-front-hpfm/src/routes/NewOrganization/Department/Detail.js
+ create mode 100644 packages/hzero-front/src/components/FileChunkUploader/index.tsx
+ create mode 100644 packages/hzero-front/src/components/FileChunkUploader/type.d.ts
+ create mode 100644 packages/hzero-front/src/customize/hfle.tsx
+Can't find Husky, skipping post-merge hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+=======================END=====================
+=========upgrade and update system==========
+2019年 12月 31日 星期二 09:30:01 CST
+[sudo] password for zk: Hit:1 http://linux.teamviewer.com/deb stable InRelease
+Get:2 http://packages.microsoft.com/repos/vscode stable InRelease [3,959 B]
+Ign:3 http://dl.google.com/linux/chrome/deb stable InRelease
+Get:4 http://archive.ubuntukylin.com:10006/ubuntukylin xenial InRelease [18.1 kB]
+Hit:5 https://deb.nodesource.com/node_8.x bionic InRelease
+Hit:6 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:7 http://dl.google.com/linux/chrome/deb stable Release
+Get:8 https://packages.microsoft.com/ubuntu/18.04/prod bionic InRelease [4,003 B]
+Hit:9 http://dl.winehq.org/wine-builds/ubuntu bionic InRelease
+Hit:10 http://archive.canonical.com/ubuntu bionic InRelease
+Hit:11 http://cn.archive.ubuntu.com/ubuntu bionic InRelease
+Get:12 http://cn.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Hit:14 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic InRelease
+Get:15 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:16 http://cn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:17 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [295 kB]
+Get:18 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [73.8 kB]
+Get:19 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [143 kB]
+Get:20 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [264 kB]
+Get:21 http://security.ubuntu.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [38.5 kB]
+Get:22 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [195 kB]
+Get:23 http://security.ubuntu.com/ubuntu bionic-security/main DEP-11 48x48 Icons [17.6 kB]
+Get:24 http://security.ubuntu.com/ubuntu bionic-security/main DEP-11 64x64 Icons [41.5 kB]
+Get:25 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [42.1 kB]
+Get:26 http://security.ubuntu.com/ubuntu bionic-security/universe DEP-11 48x48 Icons [16.4 kB]
+Get:27 http://security.ubuntu.com/ubuntu bionic-security/universe DEP-11 64x64 Icons [106 kB]
+Get:28 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [445 kB]
+Get:29 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Get:30 http://cn.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:31 http://cn.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [7,980 B]
+Hit:32 https://deb.opera.com/opera-stable stable InRelease
+Fetched 1,969 kB in 6s (340 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages have been kept back:
+  libodbc1
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+==================svn update==================
+Updating '.':
+U    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先订单全部接收：订单全部（103）-再订单部分入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/平台租户管理员-送货单创建-权限分配功能.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/平台租户管理员-送货单创建-权限回收功能.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单创建-查询-公司.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-跨订单部分冲销至供应商102.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/平台租户管理员-送货单查询-权限分配功能.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/平台租户管理员-送货单查询-权限回收功能.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-先跨订单部分冲销至接收106-再跨订单全部冲销至供应商104.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行全部创建-内向交货单部分接收-关闭送货单.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-勾选送货单单次接收后自动关闭-订单部分接收入库（101）-订单全部冲销至供应商（102）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-按明细查询-查询-订单号.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行发运行创建多个送货单-不勾选送货单提交回传ERP-订单全部接收：送货单的全部（101）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/SRM接收，不勾选审批，不勾选单次接收即关闭-发运行部分创建-部分全部接收-全部冲销-取消.jmx
+svn: E000036: Can't check path '/home/zk/project/svn/50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/【新迭代】送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx': File name too long
+==================hzero-front===============
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+   7184cba23..5102f8101  develop    -> origin/develop
+Updating 7184cba23..5102f8101
+Fast-forward
+ config/compileStartEnv.js                          |    2 +-
+ config/compileTestEnv.js                           |    2 +-
+ package.json                                       |    2 +-
+ packages/hzero-front-hadm/config/routers.js        |    9 +
+ packages/hzero-front-hadm/src/customize/index.js   |    1 +
+ .../hzero-front-hadm/src/customize/traceLog.js     |   10 +
+ .../hzero-front-hadm/src/routes/TraceLog/index.js  |   86 +
+ .../components/URLDimensionRuleInput/index.js      |    2 +-
+ packages/hzero-front-hadm/src/utils/router.js      |    1 +
+ .../src/components/FileChunkUploader/index.js      |    9 +-
+ .../src/components/FileChunkUploader/type.d.ts     |    6 +-
+ .../src/routes/FileAggregate/TableList.js          |    2 +-
+ .../src/routes/ApiManagement/index.js              |    4 +-
+ .../src/routes/RoleManagement/List.js              |    3 +-
+ .../src/routes/RoleManagement/TreeList/List.js     |   41 +-
+ .../src/routes/RoleManagement/TreeList/index.js    |  372 +-
+ .../routes/SecurityGroup/Detail/DimensionTab.js    |   15 +-
+ .../src/routes/SubAccount/Org/Search.js            |   52 +-
+ .../src/routes/SubAccount/Site/FilterForm.js       |   52 +-
+ .../src/routes/UserInfo/UserReceiveConfig.js       |    8 +-
+ .../src/services/roleManagementService.js          |    4 +-
+ .../src/stores/missPermissionRecordDS.js           |    2 +-
+ .../KnowledgeCategory/Detail/StaticTextEditor.js   |   20 +-
+ .../src/routes/MessageCenter/ChatDrawer.js         |    3 +
+ .../src/routes/MessageCenter/Content/index.less    |  221 +-
+ .../routes/MessageCenter/SendMessage/index.less    |   74 +-
+ .../src/routes/MessageCenter/default.less          |   41 +-
+ .../src/routes/MessageCenter/index.js              |  130 +-
+ .../src/routes/MessageCenter/index.less            |  138 +-
+ .../hzero-front-hims/src/stores/messageCenterDS.js |    4 +
+ .../src/models/userReceiveConfig.js                |   30 +-
+ .../src/routes/NewOrganization/Company/index.js    |   24 +-
+ .../Department/CreateEmployeeDrawer.js             |   16 +-
+ .../routes/NewOrganization/Department/Detail.js    |   13 +-
+ .../src/routes/NewOrganization/Department/index.js |   88 +-
+ .../src/routes/NewOrganization/Position/index.js   |   45 +-
+ .../src/routes/NewOrganization/index.js            |  132 +-
+ .../src/routes/NewOrganization/index.less          |   19 +
+ packages/hzero-front-hpfm/src/stores/companyDS.js  |  118 +-
+ .../hzero-front-hpfm/src/stores/departmentDS.js    |  164 +-
+ packages/hzero-front-hpfm/src/stores/positionDS.js |  102 +-
+ .../src/routes/DataSet/Detail/index.js             |    2 +-
+ .../components/LabelCKEditor/index.js              |   39 +-
+ .../hzero-front-hrpt/src/stores/labelTemplateDS.js |    4 +-
+ .../src/components/FileChunkUploader/type.d.ts     |    4 +-
+ packages/hzero-front/src/customize/traceLog.js     |   30 +
+ .../components/Header/components/Toolbar/index.tsx |   14 +
+ .../CommonLayout/components/Header/index.tsx       |    9 +-
+ .../hzero-front/src/layouts/CommonLayout/index.tsx |    3 +
+ .../DefaultLayout/components/NormalHeader/index.js |    5 +
+ .../hzero-front/src/layouts/DefaultLayout/index.js |    3 +-
+ .../hzero-front/src/layouts/SideLayout/index.js    |    3 +
+ .../src/layouts/SideLineLayout/index.js            |    3 +
+ .../hzero-front/src/layouts/TopLayout/index.js     |    4 +-
+ .../layouts/components/DefaultHeaderRight/index.js |    4 +-
+ .../components/DefaultListenWebSocket/index.js     |    4 +-
+ .../layouts/components/DefaultNoticeIcon/index.js  |    6 +-
+ .../layouts/components/DefaultTraceLog/index.js    |  113 +
+ packages/hzero-front/src/models/global.js          |   21 +
+ packages/hzero-front/src/services/api/file.ts      |    8 +-
+ .../hzero-front/src/services/traceLogService.js    |   32 +
+ .../hzero-front/src/utils/utils/collections.ts     |   32 +
+ packages/hzero-front/src/utils/utils/index.tsx     |    1 +
+ public/index.html                                  |    1 +
+ .../code-scan/data/hzero-platform-prompt-v1.1.xlsx |  Bin 0 -> 367833 bytes
+ .../intl-versions-manual-process/v1.1.delete.yml   |   56 +
+ .../data/intl-versions-manual-process/v1.1.yml     | 5965 ++++++++++++++++++
+ scripts/code-scan/data/intl-versions/v1.1.yml      | 6475 ++++++++++++++++++++
+ scripts/code-scan/reductionFromExcel.js            |   12 +-
+ scripts/code-scan/simpleCheckError.js              |    3 +-
+ yarn.lock                                          |   75 +-
+ 71 files changed, 14358 insertions(+), 640 deletions(-)
+ create mode 100644 packages/hzero-front-hadm/src/customize/index.js
+ create mode 100644 packages/hzero-front-hadm/src/customize/traceLog.js
+ create mode 100644 packages/hzero-front-hadm/src/routes/TraceLog/index.js
+ create mode 100644 packages/hzero-front-hpfm/src/routes/NewOrganization/index.less
+ create mode 100644 packages/hzero-front/src/customize/traceLog.js
+ create mode 100644 packages/hzero-front/src/layouts/components/DefaultTraceLog/index.js
+ create mode 100644 packages/hzero-front/src/services/traceLogService.js
+ create mode 100644 packages/hzero-front/src/utils/utils/collections.ts
+ create mode 100644 scripts/code-scan/data/hzero-platform-prompt-v1.1.xlsx
+ create mode 100644 scripts/code-scan/data/intl-versions-manual-process/v1.1.delete.yml
+ create mode 100644 scripts/code-scan/data/intl-versions-manual-process/v1.1.yml
+ create mode 100644 scripts/code-scan/data/intl-versions/v1.1.yml
+Can't find Husky, skipping post-merge hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+=======================END=====================
+=========upgrade and update system==========
+2020年 01月 02日 星期四 09:30:01 CST
+[sudo] password for zk: Get:1 http://archive.ubuntukylin.com:10006/ubuntukylin xenial InRelease [18.1 kB]
+Get:2 http://packages.microsoft.com/repos/vscode stable InRelease [3,959 B]
+Ign:3 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:4 https://download.docker.com/linux/ubuntu bionic InRelease
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+Get:6 https://packages.microsoft.com/ubuntu/18.04/prod bionic InRelease [4,003 B]
+Hit:7 http://linux.teamviewer.com/deb stable InRelease
+Hit:8 https://deb.nodesource.com/node_8.x bionic InRelease
+Hit:9 http://archive.canonical.com/ubuntu bionic InRelease
+Hit:11 http://dl.winehq.org/wine-builds/ubuntu bionic InRelease
+Hit:12 http://cn.archive.ubuntu.com/ubuntu bionic InRelease
+Get:14 http://cn.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:15 https://deb.opera.com/opera-stable stable InRelease [2,591 B]
+Get:16 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:17 http://cn.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:18 https://deb.opera.com/opera-stable stable/non-free amd64 Packages [1,823 B]
+Get:19 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [295 kB]
+Get:20 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [73.8 kB]
+Get:21 http://cn.archive.ubuntu.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [143 kB]
+Get:22 http://security.ubuntu.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [38.5 kB]
+Get:23 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [264 kB]
+Get:24 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [211 kB]
+Get:25 http://cn.archive.ubuntu.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [458 kB]
+Get:26 http://cn.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2,464 B]
+Get:27 http://cn.archive.ubuntu.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [7,976 B]
+Get:28 http://security.ubuntu.com/ubuntu bionic-security/main DEP-11 48x48 Icons [17.6 kB]
+Get:29 http://security.ubuntu.com/ubuntu bionic-security/main DEP-11 64x64 Icons [41.5 kB]
+Get:30 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [42.1 kB]
+Get:31 http://security.ubuntu.com/ubuntu bionic-security/universe DEP-11 48x48 Icons [16.4 kB]
+Get:32 http://security.ubuntu.com/ubuntu bionic-security/universe DEP-11 64x64 Icons [116 kB]
+Get:33 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2,464 B]
+Ign:13 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic InRelease
+Err:34 https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic Release
+  Could not handshake: Peer has terminated the connection [IP: 54.230.109.159 443]
+Reading package lists...
+E: The repository 'https://packages.gitlab.com/runner/gitlab-ci-multi-runner/ubuntu bionic Release' no longer has a Release file.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages have been kept back:
+  libodbc1
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+==================svn update==================
+Updating '.':
+D    30 功能设计/30 UED标准/srm_axurelib/Srm_V2.2_20191009.rplib
+D    30 功能设计/30 UED标准/srm_axurelib/srmicon(请下载安装字体包）.ttf
+A    30 功能设计/30 UED标准/srm_axurelib/srmfont(下载后请双击安装).ttf
+A    30 功能设计/30 UED标准/srm_axurelib/Srm_V2.2_20191227.rplib
+D    30 功能设计/PMD移动端/子应用开发_MVP3
+A    30 功能设计/PMD移动端/移动端项目汇总
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/海能达_移动端_供应商信息变更_V1.0.1.rp
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/index.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-211-待办事项_列表_协议审批_审批通过_输入文本.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-241-待办事项_列表_协议审批_操作_上传附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-260-待办事项_列表_协议审批_标的明细.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-244-待办事项_列表_协议审批_操作_反馈_成功.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-210-待办事项_列表_协议审批_审批通过.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-250-待办事项_列表_协议审批_同意并加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-245-待办事项_列表_协议审批_操作_反馈_网络故障.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-200-待办事项_列表_协议审批明细.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-112-待办事项_列表_筛选_申请人.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-230-待办事项_列表_协议审批_转交.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-300-我的工作流_发起_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-242-待办事项_列表_协议审批_操作_附件查看.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-410-我的工作流_发起_列表_详情_行信息详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-201-待办事项_列表_协议审批_更多操作.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-402-我的工作流_发起_列表_详情_附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-302-我的工作流_抄送_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-246-待办事项_列表_协议审批_操作_反馈_失败.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-203-待办事项_列表_协议审批_附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-312-我的工作流_抄送_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-310-我的工作流_参与_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-301-我的工作流_参与_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-220-待办事项_列表_协议审批_审批拒绝.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-100-待办事项_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-243-待办事项_列表_协议审批_操作_反馈.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-110-待办事项_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-202-待办事项_列表_协议审批_操作记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-400-我的工作流_发起_列表_详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-401-我的工作流_发起_列表_详情_操作记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-311-我的工作流_参与_列表_筛选_流程状态.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-111-待办事项_列表_筛选_日期.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/links/协议审批-240-待办事项_列表_协议审批_加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-202-待办事项_列表_协议审批_操作记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-400-我的工作流_发起_列表_详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-401-我的工作流_发起_列表_详情_操作记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-311-我的工作流_参与_列表_筛选_流程状态.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-111-待办事项_列表_筛选_日期.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-240-待办事项_列表_协议审批_加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-211-待办事项_列表_协议审批_审批通过_输入文本.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-241-待办事项_列表_协议审批_操作_上传附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-260-待办事项_列表_协议审批_标的明细.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-244-待办事项_列表_协议审批_操作_反馈_成功.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-210-待办事项_列表_协议审批_审批通过.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-250-待办事项_列表_协议审批_同意并加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-245-待办事项_列表_协议审批_操作_反馈_网络故障.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-200-待办事项_列表_协议审批明细.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-112-待办事项_列表_筛选_申请人.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-230-待办事项_列表_协议审批_转交.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-300-我的工作流_发起_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-242-待办事项_列表_协议审批_操作_附件查看.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-410-我的工作流_发起_列表_详情_行信息详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-201-待办事项_列表_协议审批_更多操作.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-402-我的工作流_发起_列表_详情_附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-302-我的工作流_抄送_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-246-待办事项_列表_协议审批_操作_反馈_失败.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-203-待办事项_列表_协议审批_附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-312-我的工作流_抄送_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-310-我的工作流_参与_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-301-我的工作流_参与_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-220-待办事项_列表_协议审批_审批拒绝.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-100-待办事项_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-243-待办事项_列表_协议审批_操作_反馈.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_协议审批_20191225/preview/协议审批-110-待办事项_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/index.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-220-待办事项_列表_验收单审批_审批拒绝.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-243-待办事项_列表_验收单审批_操作_反馈.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-202-待办事项_列表_验收单审批_操作记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-211-待办事项_列表_验收单审批_审批通过_输入文本.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-241-待办事项_列表_验收单审批_操作_上传附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-410-我的工作流_发起_列表_详情_行信息详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-302-我的工作流_抄送_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-244-待办事项_列表_验收单审批_操作_反馈_成功.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-210-待办事项_列表_验收单审批_审批通过.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-301-我的工作流_参与_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-310-我的工作流_参与_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-110-待办事项_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-311-我的工作流_参与_列表_筛选_流程状态.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-111-待办事项_列表_筛选_日期.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-245-待办事项_列表_验收单审批_操作_反馈_网络故障.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-250-待办事项_列表_验收单审批_同意并加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-242-待办事项_列表_验收单审批_操作_附件查看.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-201-待办事项_列表_验收单审批_更多操作.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-203-待办事项_列表_验收单审批_附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-246-待办事项_列表_验收单审批_操作_反馈_失败.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-260-待办事项_列表_验收单审批_行信息详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-200-待办事项_列表_验收单审批.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-240-待办事项_列表_验收单审批_加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-112-待办事项_列表_筛选_申请人.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-300-我的工作流_发起_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-402-我的工作流_发起_列表_详情_附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-312-我的工作流_抄送_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-100-待办事项_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-401-我的工作流_发起_列表_详情_操作记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-400-我的工作流_发起_列表_详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-500-我的工作流_挂起结束参与抄送_列表_详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/links/验收单审批-230-待办事项_列表_验收单审批_转交.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-111-待办事项_列表_筛选_日期.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-230-待办事项_列表_验收单审批_转交.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-500-我的工作流_挂起结束参与抄送_列表_详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-242-待办事项_列表_验收单审批_操作_附件查看.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-220-待办事项_列表_验收单审批_审批拒绝.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-200-待办事项_列表_验收单审批.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-202-待办事项_列表_验收单审批_操作记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-240-待办事项_列表_验收单审批_加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-112-待办事项_列表_筛选_申请人.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-241-待办事项_列表_验收单审批_操作_上传附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-402-我的工作流_发起_列表_详情_附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-210-待办事项_列表_验收单审批_审批通过.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-310-我的工作流_参与_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-301-我的工作流_参与_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-100-待办事项_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-110-待办事项_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-400-我的工作流_发起_列表_详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-401-我的工作流_发起_列表_详情_操作记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-311-我的工作流_参与_列表_筛选_流程状态.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-250-待办事项_列表_验收单审批_同意并加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-245-待办事项_列表_验收单审批_操作_反馈_网络故障.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-201-待办事项_列表_验收单审批_更多操作.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-246-待办事项_列表_验收单审批_操作_反馈_失败.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-203-待办事项_列表_验收单审批_附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-260-待办事项_列表_验收单审批_行信息详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-243-待办事项_列表_验收单审批_操作_反馈.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-300-我的工作流_发起_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-211-待办事项_列表_验收单审批_审批通过_输入文本.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-410-我的工作流_发起_列表_详情_行信息详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-302-我的工作流_抄送_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-244-待办事项_列表_验收单审批_操作_反馈_成功.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_验收单审批_20191225/preview/验收单审批-312-我的工作流_抄送_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/index.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-401-我的工作流_发起_详情_记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-211-待办事项_列表_企业信息变更明细_审批通过_输入文本.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-400-我的工作流_发起_详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-510-我的工作流_参与_详情_表单附件-历史附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-501-我的工作流_参与抄送_详情_记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-244-待办事项_列表_企业信息变更明细_操作_反馈_成功.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-500-我的工作流_参与抄送_详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-230-待办事项_列表_企业信息变更明细_转交.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-302-我的工作流_抄送_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-310-我的工作流_参与_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-301-我的工作流_参与_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-242-待办事项_列表_企业信息变更明细_操作_附件查看.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-110-待办事项_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-246-待办事项_列表_企业信息变更明细_操作_反馈_失败.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-311-我的工作流_参与_列表_筛选_流程状态.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-111-待办事项_列表_筛选_日期.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-243-待办事项_列表_企业信息变更明细_操作_反馈.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-200-待办事项_列表_企业信息变更明细.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-410-我的工作流_发起_详情_表单附件-历史附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-240-待办事项_列表_企业信息变更明细_加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-241-待办事项_列表_企业信息变更明细_操作_上传附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-210-待办事项_列表_企业信息变更明细_审批通过.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-260-待办事项_列表_企业信息变更明细_ou层信息明细.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-112-待办事项_列表_筛选_申请人.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-300-我的工作流_发起_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-245-待办事项_列表_企业信息变更明细_操作_反馈_网络故障.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-250-待办事项_列表_企业信息变更明细_同意并加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-100-待办事项_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-201-待办事项_列表_企业信息变更明细_更多操作.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-203-待办事项_列表_企业信息变更明细_附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-220-待办事项_列表_企业信息变更明细_审批拒绝.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/links/企业变更审批明细-202-待办事项_列表_企业信息变更明细_操作记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-112-待办事项_列表_筛选_申请人.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-300-我的工作流_发起_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-245-待办事项_列表_企业信息变更明细_操作_反馈_网络故障.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-302-我的工作流_抄送_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-310-我的工作流_参与_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-110-待办事项_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-201-待办事项_列表_企业信息变更明细_更多操作.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-203-待办事项_列表_企业信息变更明细_附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-111-待办事项_列表_筛选_日期.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-220-待办事项_列表_企业信息变更明细_审批拒绝.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-202-待办事项_列表_企业信息变更明细_操作记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-410-我的工作流_发起_详情_表单附件-历史附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-240-待办事项_列表_企业信息变更明细_加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-211-待办事项_列表_企业信息变更明细_审批通过_输入文本.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-241-待办事项_列表_企业信息变更明细_操作_上传附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-260-待办事项_列表_企业信息变更明细_ou层信息明细.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-250-待办事项_列表_企业信息变更明细_同意并加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-230-待办事项_列表_企业信息变更明细_转交.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-301-我的工作流_参与_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-100-待办事项_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-242-待办事项_列表_企业信息变更明细_操作_附件查看.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-246-待办事项_列表_企业信息变更明细_操作_反馈_失败.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-311-我的工作流_参与_列表_筛选_流程状态.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-200-待办事项_列表_企业信息变更明细.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-243-待办事项_列表_企业信息变更明细_操作_反馈.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-401-我的工作流_发起_详情_记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-400-我的工作流_发起_详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-510-我的工作流_参与_详情_表单附件-历史附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-501-我的工作流_参与抄送_详情_记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-244-待办事项_列表_企业信息变更明细_操作_反馈_成功.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-210-待办事项_列表_企业信息变更明细_审批通过.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_企业变更审批明细_20191225/preview/企业变更审批明细-500-我的工作流_参与抄送_详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/index.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-244-待办事项_列表_需求审批_操作_反馈_成功.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-500-我的工作流_参与抄送_列表_详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-201-待办事项_列表_需求审批明细_更多操作.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-203-待办事项_列表_需求审批明细_附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-230-待办事项_列表_需求审批_转交.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-202-待办事项_列表_需求审批明细_操作记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-242-待办事项_列表_需求审批_操作_附件查看.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-246-待办事项_列表_需求审批_操作_反馈_失败.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-243-待办事项_列表_需求审批_操作_反馈.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-302-我的工作流_抄送_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-240-待办事项_列表_需求审批_加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-310-我的工作流_参与_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-301-我的工作流_参与_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-410-我的工作流_发起_列表_详情_需求行详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-241-待办事项_列表_需求审批_操作_上传附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-110-待办事项_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-311-我的工作流_参与_列表_筛选_流程状态.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-111-待办事项_列表_筛选_日期.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-210-待办事项_列表_需求审批_审批通过.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-250-待办事项_列表_需求审批_同意并加签.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-245-待办事项_列表_需求审批_操作_反馈_网络故障.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-200-待办事项_列表_需求审批明细.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-112-待办事项_列表_筛选_申请人.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-260-待办事项_列表_需求审批_需求行信息详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-300-我的工作流_发起_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-220-待办事项_列表_需求审批_审批拒绝.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-402-我的工作流_发起_列表_详情_附件.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-312-我的工作流_抄送_列表_筛选.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-100-待办事项_列表.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-211-待办事项_列表_需求审批_审批通过_输入文本.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-401-我的工作流_发起_列表_详情_操作记录.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/links/需求审批-400-我的工作流_发起_列表_详情.html
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-242-待办事项_列表_需求审批_操作_附件查看.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-260-待办事项_列表_需求审批_需求行信息详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-246-待办事项_列表_需求审批_操作_反馈_失败.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-243-待办事项_列表_需求审批_操作_反馈.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-402-我的工作流_发起_列表_详情_附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-312-我的工作流_抄送_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-301-我的工作流_参与_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-410-我的工作流_发起_列表_详情_需求行详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-100-待办事项_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-401-我的工作流_发起_列表_详情_操作记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-311-我的工作流_参与_列表_筛选_流程状态.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-244-待办事项_列表_需求审批_操作_反馈_成功.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-210-待办事项_列表_需求审批_审批通过.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-245-待办事项_列表_需求审批_操作_反馈_网络故障.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-200-待办事项_列表_需求审批明细.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-112-待办事项_列表_筛选_申请人.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-300-我的工作流_发起_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-220-待办事项_列表_需求审批_审批拒绝.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-240-待办事项_列表_需求审批_加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-302-我的工作流_抄送_列表.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-310-我的工作流_参与_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-211-待办事项_列表_需求审批_审批通过_输入文本.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-241-待办事项_列表_需求审批_操作_上传附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-110-待办事项_列表_筛选.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-400-我的工作流_发起_列表_详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-111-待办事项_列表_筛选_日期.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-500-我的工作流_参与抄送_列表_详情.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-201-待办事项_列表_需求审批明细_更多操作.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-203-待办事项_列表_需求审批明细_附件.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-250-待办事项_列表_需求审批_同意并加签.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-202-待办事项_列表_需求审批明细_操作记录.png
+A    30 功能设计/PMD移动端/移动端项目汇总/海能达-企业微信/子应用切图标注_MVP3.0_20191225/移动端子应用_MVP3.0_需求审批_20191225/preview/需求审批-230-待办事项_列表_需求审批_转交.png
+U    30 功能设计/SSLM供应商管理/采购方发起供应商信息变更V1.4.rp
+A    30 功能设计/SSLM供应商管理/合作伙伴-导入ERP V1.5.rp
+A    30 功能设计/SSLM供应商管理/采购方发起供应商信息变更V1.7.rp
+D    30 功能设计/SCEC目录化采购/华彬/商品分享优化定稿.rp
+A    30 功能设计/SCEC目录化采购/华彬/商品分享优化定稿.rp
+D    30 功能设计/SSRC寻源管理/产品中心迭代/12月/产品标准化V3.9（批量添加供应商）.rp
+A    30 功能设计/SSRC寻源管理/寻源消息/寻源系统消息统计V1.9.xlsx
+D    30 功能设计/SSRC寻源管理/新莱洁净/新莱洁净-产品标准化V1.6.rp
+D    30 功能设计/SSRC寻源管理/新莱洁净/新莱洁净-产品标准化V1.7.rp
+U    30 功能设计/SSRC寻源管理/新莱洁净/历史文档/新莱洁净-产品标准化V1.6.rp
+A    30 功能设计/SSRC寻源管理/新莱洁净/历史文档/新莱洁净-产品标准化V1.7.rp
+A    30 功能设计/SSRC寻源管理/新莱洁净/新莱洁净-产品标准化V2.0.rp
+A    30 功能设计/SSRC寻源管理/新莱洁净/新莱洁净-产品标准化V1.8.rp
+A    30 功能设计/SSRC寻源管理/百雀羚
+A    30 功能设计/SSRC寻源管理/百雀羚/百雀羚产品标准化V0.3（批量添加供应商）.rp
+A    30 功能设计/SODR订单服务/送货加急超期.rp
+A    30 功能设计/SODR订单服务/送货创建时间配置.rp
+U    30 功能设计/SPCM采购协议/采购协议V1.4.rp
+U    50 测试管理/自动化/SRM/TestSuite/TestSuite(Smoke).jmx
+U    50 测试管理/自动化/SRM/TestCase/合作伙伴管理-我的合作伙伴/租户管理员-导入ERP-状态待导入-多条导入功能.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行发运行创建多个送货单-不勾选送货单提交回传ERP-跨订单部分接收（101）-先跨订单部分冲销至接收（106）-再跨订单部分冲销至供应商（104）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-先订单部分冲销至接收（106）-再跨订单全部冲销至供应商（104）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方-冲销-查询-物料查询.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单发运行部分创建-内向交货单全部接收.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方-接收-查询-公司查询.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨订单部分接收（103）-再跨订单部分入库（105）-跨订单全部直接冲销至供应商（102）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-按明细查询-查询-公司.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再订单全部入库105.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先内向交货单全部接收（103）-再内向交货单部分入库（105）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-送货单查询-查询-全部为空.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/采购方租户管理员-配置中心勾选审批-关闭送货单-站内消息.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-内向交货单部分直接冲销至供应商（102）-送货单关闭.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/销售员-客户收货记录-查询-事务编号.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先订单部分冲销至接收（106）-再订单部分冲销至供应商（104）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-先跨订单部分接收（103）-再跨订单部分入库（105）-先跨订单全部冲销至接收（106）-再跨订单全部冲销至供应商（104）.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/ERP接收-仅有SAP订单与SRM订单-先跨订单部分接收103-再跨订单部分入库105-先订单全部冲销至接收106-再订单部分冲销至供应商104.jmx
+A    50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-不勾选送货单提交回传ERP-先跨订单部分接收（103）-再跨订单部分入库（105）-先订单部分冲销至接收（106）-再跨订单全部冲销至供应商（104）.jmx
+svn: E000036: Can't check path '/home/zk/project/svn/50 测试管理/自动化/SRM/TestCase/销售管理-送货协同/送货单拆分行且发运行创建多个送货单-回传内向交货单-跨内向交货单先部分接收（103）-再跨内向交货单部分入库（105）-内向交货单全部冲销至接收（106）-内向交货单全部冲销至供应商（104）-送货单取消.jmx': File name too long
+==================hzero-front===============
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+   d6b0c67cd..24cf02f3a  develop    -> origin/develop
+Updating d6b0c67cd..24cf02f3a
+Fast-forward
+ .../hzero-front-hiam/src/routes/ApiManagement/index.js  | 17 +++++++++++++++++
+ .../hzero-front-hiam/src/stores/apiManagementGroupDS.js |  5 +++++
+ 2 files changed, 22 insertions(+)
+Can't find Husky, skipping post-merge hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+./init_daily.sh: line 55: -n: command not found
+======srm-front-ssrc=========
+Switched to branch 'develop'
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              test       -> FETCH_HEAD
+Already up to date.
+=======================END=====================

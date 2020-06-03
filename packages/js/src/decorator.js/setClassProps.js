@@ -28,3 +28,35 @@ export function setClassProps(allProps = {}) {
         }
     }    
 }
+
+
+/**
+ * two
+ *
+*/
+
+function newClass(obj = {}) {
+  return Components => {
+    const Wrapper = Components;
+
+    class Maggic extends Component {
+      constructor(props) {
+        super(props);
+        this.state = {};
+      }
+
+      render() {
+        const newProps = {
+          ...this.props,
+          tests: obj,
+        };
+
+        return <Wrapper {...newProps} />;
+      }
+    }
+
+    return React.forwardRef((props, ref) => {
+      return <Maggic {...props} maggicRef={ref} />;
+    });
+  };
+}

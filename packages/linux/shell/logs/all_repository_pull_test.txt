@@ -1,0 +1,358 @@
+From code.choerodon.com.cn:hzero-srm/srm-source
+ * branch                test       -> FETCH_HEAD
+Updating 2ee825ae9..aa8cb42a5
+Fast-forward
+ .../rfx/app/service/impl/RfxHeaderServiceImpl.java |  4 ++--
+ .../impl/IRfxLineItemDomainServiceImpl.java        | 10 ++++++----
+ .../source/rfx/infra/constant/SourceConstants.java | 12 +++++------
+ .../app/service/impl/PriceLibraryServiceImpl.java  |  6 ++++--
+ .../source/share/domain/entity/RoundHeader.java    | 13 ++++++++++++
+ .../share/infra/constant/ShareConstants.java       |  4 ++++
+ .../resources/mapper/bid/SourceNoticeMapper.xml    |  2 +-
+ .../resources/mapper/rfx/RfxLineItemMapper.xml     |  2 --
+ .../mapper/rfx/RfxQuotationLineMapper.xml          |  4 ++--
+ .../resources/mapper/share/PriceLibraryMapper.xml  | 23 +++++++++++++++-------
+ .../resources/mapper/share/RoundHeaderMapper.xml   |  2 +-
+ .../resources/messages/messages_en_US.properties   |  1 +
+ .../resources/messages/messages_zh_CN.properties   |  1 +
+ 13 files changed, 57 insertions(+), 27 deletions(-)
+====END====
+=====START====
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-platform-fe
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-hiam
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-hiam
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-spfm
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-spfm
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-sslm
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-sslm
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              test       -> FETCH_HEAD
+Already up to date.
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+From code.choerodon.com.cn:17211/srm-multi-language
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+From code.choerodon.com.cn:hzero-srm/srm-source
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+From code.choerodon.com.cn:hzero-srm/srm-source
+ * branch                test       -> FETCH_HEAD
+Already up to date.
+====END====
+=====START====
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-platform-fe
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-hiam
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-hiam
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-spfm
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-spfm
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-sslm
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-sslm
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              test       -> FETCH_HEAD
+Already up to date.
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+From code.choerodon.com.cn:17211/srm-multi-language
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+From code.choerodon.com.cn:hzero-srm/srm-source
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+From code.choerodon.com.cn:hzero-srm/srm-source
+ * branch                test       -> FETCH_HEAD
+Already up to date.
+====END====
+=====START====
+====END====
+=====START====
+====END====
+=====START====
+====END====
+=====START====
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-platform-fe
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+=====START====
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-front
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+Can't find Husky, skipping post-checkout hook
+You can reinstall it using 'npm install husky --save-dev' or delete this hook
+From code.choerodon.com.cn:hzero-hzero/hzero-platform-fe
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:srm-srm-porsche/srm-front-cux-porsche
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-hiam
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-hiam
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-spfm
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-spfm
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-sslm
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-sslm
+ * branch            test       -> FETCH_HEAD
+Already up to date.
+Switched to branch 'develop'
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+husky > post-checkout (node v8.17.0)
+From code.choerodon.com.cn:hzero-srm/srm-front-ssrc
+ * branch              test       -> FETCH_HEAD
+Already up to date.
+Already on 'develop'
+Your branch is up to date with 'origin/develop'.
+From code.choerodon.com.cn:17211/srm-multi-language
+ * branch            develop    -> FETCH_HEAD
+Already up to date.
+error: pathspec 'test' did not match any file(s) known to git.
+fatal: Couldn't find remote ref test
+fatal: The remote end hung up unexpectedly
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+From code.choerodon.com.cn:hzero-srm/srm-source
+ * branch                develop    -> FETCH_HEAD
+Already up to date.
+Switched to branch 'test'
+Your branch is up to date with 'origin/test'.
+From code.choerodon.com.cn:hzero-srm/srm-source
+ * branch                test       -> FETCH_HEAD
+Already up to date.
+====END====
